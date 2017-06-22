@@ -5,26 +5,35 @@
 
 
 <div class="stage-shelf stage-shelf-right hidden" id="sidebar">
-    <ul class="nav nav-bordered nav-stacked flex-column">
-        <li class="nav-header">Examples</li>
-        <li class="nav-item">
-            <a class="nav-link active" href="#">Startup</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="minimal/index.html">Minimal</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="bold/index.html">Bold</a>
-        </li>
-        <li class="nav-divider"></li>
-        <li class="nav-header">Docs</li>
-        <li class="nav-item">
-            <a class="nav-link" href="docs/index.html">Toolkit</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="http://getbootstrap.com">Bootstrap</a>
-        </li>
-    </ul>
+
+
+	<?php if ( has_nav_menu( 'primary' ) ) :
+		wp_nav_menu( array(
+			'theme_location' => 'primary-mobile',
+			'menu_class'     => 'nav nav-bordered nav-stacked flex-column',
+			'container'      => false
+		) );
+	endif; ?>
+
+<!--        <li class="nav-header">Examples</li>-->
+<!--        <li class="nav-item">-->
+<!--            <a class="nav-link active" href="#">Startup</a>-->
+<!--        </li>-->
+<!--        <li class="nav-item">-->
+<!--            <a class="nav-link" href="minimal/index.html">Minimal</a>-->
+<!--        </li>-->
+<!--        <li class="nav-item">-->
+<!--            <a class="nav-link" href="bold/index.html">Bold</a>-->
+<!--        </li>-->
+<!--        <li class="nav-divider"></li>-->
+<!--        <li class="nav-header">Docs</li>-->
+<!--        <li class="nav-item">-->
+<!--            <a class="nav-link" href="docs/index.html">Toolkit</a>-->
+<!--        </li>-->
+<!--        <li class="nav-item">-->
+<!--            <a class="nav-link" href="http://getbootstrap.com">Bootstrap</a>-->
+<!--        </li>-->
+
 </div>
 
 <div class="stage" id="stage">
@@ -35,6 +44,7 @@
         <div class="container py-4 fixed-top app-navbar">
 
             <nav class="navbar navbar-transparent navbar-padded navbar-toggleable-sm">
+
                 <button
                         class="navbar-toggler navbar-toggler-right hidden-md-up"
                         type="button"
@@ -49,20 +59,15 @@
                 </a>
 
                 <div class="hidden-sm-down text-uppercase">
-                    <ul class="navbar-nav">
-                        <li class="nav-item px-1 ">
-                            <a class="nav-link" href="#">StartUp</a>
-                        </li>
-                        <li class="nav-item px-1 ">
-                            <a class="nav-link" href="minimal/index.html">Minimal</a>
-                        </li>
-                        <li class="nav-item px-1 ">
-                            <a class="nav-link" href="bold/index.html">Bold</a>
-                        </li>
-                        <li class="nav-item px-1 ">
-                            <a class="nav-link" href="docs/index.html">Docs</a>
-                        </li>
-                    </ul>
+
+	                <?php if ( has_nav_menu( 'primary' ) ) :
+		                wp_nav_menu( array(
+			                'theme_location' => 'primary',
+			                'menu_class'     => 'navbar-nav',
+			                'container'      => false
+		                ) );
+	                endif; ?>
+
                 </div>
 
             </nav>

@@ -14,6 +14,7 @@ add_theme_support( 'title-tag' );
 include( get_template_directory() . '/includes/front/enqueue.php' );
 include( get_template_directory() . '/includes/front/nav.php' );
 include( get_template_directory() . '/includes/widgets.php' );
+include( get_template_directory() . '/includes/admin/acf-opts.php' );
 
 
 // Action & Filter Hooks

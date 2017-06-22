@@ -1,11 +1,6 @@
 <?php get_header(); ?>
 
-
-<body <?php body_class()?>>
-
-
 <div class="stage-shelf stage-shelf-right hidden" id="sidebar">
-
 
 	<?php if ( has_nav_menu( 'primary' ) ) :
 		wp_nav_menu( array(
@@ -15,31 +10,24 @@
 		) );
 	endif; ?>
 
-<!--        <li class="nav-header">Examples</li>-->
-<!--        <li class="nav-item">-->
-<!--            <a class="nav-link active" href="#">Startup</a>-->
-<!--        </li>-->
-<!--        <li class="nav-item">-->
-<!--            <a class="nav-link" href="minimal/index.html">Minimal</a>-->
-<!--        </li>-->
-<!--        <li class="nav-item">-->
-<!--            <a class="nav-link" href="bold/index.html">Bold</a>-->
-<!--        </li>-->
-<!--        <li class="nav-divider"></li>-->
-<!--        <li class="nav-header">Docs</li>-->
-<!--        <li class="nav-item">-->
-<!--            <a class="nav-link" href="docs/index.html">Toolkit</a>-->
-<!--        </li>-->
-<!--        <li class="nav-item">-->
-<!--            <a class="nav-link" href="http://getbootstrap.com">Bootstrap</a>-->
-<!--        </li>-->
-
 </div>
 
 <div class="stage" id="stage">
 
+    <?php
+
+
+    $image_id = get_field( "header_background", 'options' );
+    $image_size = 'full';
+
+    $image_array = wp_get_attachment_image_src($image_id, $image_size);
+    $image_url = $image_array[0];
+
+    ?>
+
+
     <div class="block block-inverse block-fill-height app-header"
-         style="background-image: url(<?php echo get_template_directory_uri() . '/assets/img/startup-1.jpg'?> ); ">
+         style="background-image: url(<?php echo $image_url; ?> )">
 
         <div class="container py-4 fixed-top app-navbar">
 
@@ -55,18 +43,18 @@
                 </button>
 
                 <a class="navbar-brand mr-auto" href="<?php echo get_home_url(); ?>">
-                    <strong style="background: #fff; padding: 12px; border-radius: 4px; color: #28669F;">go</strong>
+                    <strong style="background: #fff; padding: 12px; border-radius: 4px; color: #28669F;"><?php echo get_bloginfo( 'name' ); ?></strong>
                 </a>
 
                 <div class="hidden-sm-down text-uppercase">
 
-	                <?php if ( has_nav_menu( 'primary' ) ) :
-		                wp_nav_menu( array(
-			                'theme_location' => 'primary',
-			                'menu_class'     => 'navbar-nav',
-			                'container'      => false
-		                ) );
-	                endif; ?>
+					<?php if ( has_nav_menu( 'primary' ) ) :
+						wp_nav_menu( array(
+							'theme_location' => 'primary',
+							'menu_class'     => 'navbar-nav',
+							'container'      => false
+						) );
+					endif; ?>
 
                 </div>
 
@@ -75,7 +63,7 @@
         </div>
 
 
-        <img class="app-graph" src="<?php echo get_template_directory_uri() .  '/assets/img/startup-0.svg' ?>">
+        <img class="app-graph" src="<?php echo get_template_directory_uri() . '/assets/img/startup-0.svg' ?>">
 
         <div class="block-xs-middle pb-5">
             <div class="container">
@@ -89,6 +77,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 
     <div class="block block-secondary app-iphone-block">
@@ -96,7 +85,9 @@
             <div class="row app-align-center">
 
                 <div class="col-sm-5 hidden-sm-down">
-                    <img class="app-iphone" src="<?php echo get_template_directory_uri() . '/assets/img/startup-2.jpg'   ?>" style="width: 100%;">
+                    <img class="app-iphone"
+                         src="<?php echo get_template_directory_uri() . '/assets/img/startup-2.jpg' ?>"
+                         style="width: 100%;">
                 </div>
 
                 <div class="col-md-6 offset-md-1 col-sm-12 offset-sm-0">
@@ -160,7 +151,7 @@
     </div>
 
     <div class="block block-inverse app-high-praise"
-         style="background-image: url(<?php echo get_template_directory_uri() .  '/assets/img/startup-3.jpg' ?>);">
+         style="background-image: url(<?php echo get_template_directory_uri() . '/assets/img/startup-3.jpg' ?>);">
         <div class="container">
             <div class="row app-align-center py-3">
                 <div class="col-sm-5 push-sm-7 py-5">
@@ -214,7 +205,7 @@
                     <p><strong>Rich calculations.</strong> Limitless ways to splice and dice your data.</p>
                 </div>
                 <div class="col-md-4 px-4 mb-5">
-                    <img class="mb-1" src="<?php echo get_template_directory_uri() .  '/assets/img/startup-13.svg' ?>">
+                    <img class="mb-1" src="<?php echo get_template_directory_uri() . '/assets/img/startup-13.svg' ?>">
                     <p><strong>Mobile apps.</strong> iOS and Android apps available for monitoring.</p>
                 </div>
                 <div class="col-md-4 px-4 mb-5">
@@ -239,7 +230,8 @@
                 <div class="col-md-4 px-4 pb-2 mb-5">
                     <div class="px-2 mb-2">
                         <h6 class="text-muted text-uppercase mb-4">Personal</h6>
-                        <img class="mb-4" src="<?php echo get_template_directory_uri() . '/assets/img/startup-15.svg' ?>">
+                        <img class="mb-4"
+                             src="<?php echo get_template_directory_uri() . '/assets/img/startup-15.svg' ?>">
                         <p class="pb-2">Plenty of processing power for any personal projects, big or small.</p>
                     </div>
 
@@ -257,7 +249,8 @@
                 <div class="col-md-4 px-4 pb-2 mb-5">
                     <div class="px-2">
                         <h6 class="text-muted text-uppercase mb-4">Business</h6>
-                        <img class="mb-4" src="<?php echo get_template_directory_uri() . '/assets/img/startup-16.svg' ?>">
+                        <img class="mb-4"
+                             src="<?php echo get_template_directory_uri() . '/assets/img/startup-16.svg' ?>">
                         <p class="pb-2">The perfect sized plan for small businesses to get started.</p>
                     </div>
 
@@ -275,7 +268,8 @@
                 <div class="col-md-4 px-4 pb-1 mb-5">
                     <div class="px-2">
                         <h6 class="text-muted text-uppercase mb-4">Corporate</h6>
-                        <img class="mb-4" src="<?php echo get_template_directory_uri() .  '/assets/img/startup-17.svg' ?>">
+                        <img class="mb-4"
+                             src="<?php echo get_template_directory_uri() . '/assets/img/startup-17.svg' ?>">
                         <p class="pb-2">An unlimited plan that will scale infinitely to any size project.</p>
                     </div>
 

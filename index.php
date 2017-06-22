@@ -4,27 +4,33 @@ get_header();
 
 
 // Background Image Testing ACF
-$image_id    = get_field( "header_background", 'options' );
-$image_size  = 'full';
-$image_array = wp_get_attachment_image_src( $image_id, $image_size );
-$image_url   = $image_array[0];
-
-
+$image_id                  = get_field( "header_background", 'options' );
+$image_size                = 'full';
+$image_array               = wp_get_attachment_image_src( $image_id, $image_size );
+$image_url                 = $image_array[0];
 $header_background_overlay = get_field( "header_background_overlay", 'options' );
-
 
 ?>
 
 
 <div class="stage-shelf stage-shelf-right hidden" id="sidebar">
 
-	<?php if ( has_nav_menu( 'primary' ) ) :
+	<?php
+
+	/**
+	 * Primary Nav Menu
+	 */
+
+	if ( has_nav_menu( 'primary' ) ) :
 		wp_nav_menu( array(
 			'theme_location' => 'primary-mobile',
 			'menu_class'     => 'nav nav-bordered nav-stacked flex-column',
 			'container'      => false
 		) );
-	endif; ?>
+
+	endif;
+
+	?>
 
 </div>
 
@@ -32,7 +38,13 @@ $header_background_overlay = get_field( "header_background_overlay", 'options' )
 
 
     <div class="block block-inverse block-fill-height app-header"
-         style="background-image: url(<?php echo $image_url; ?> )">
+         style="background-image: url(<?php
+         if ($image_url){
+	        echo $image_url;
+         } else {
+             echo get_template_directory_uri() . '/assets/img/startup-1.jpg';
+         }
+	     ?> )">
 
         <div class="container py-4 fixed-top app-navbar">
 
@@ -48,18 +60,26 @@ $header_background_overlay = get_field( "header_background_overlay", 'options' )
                 </button>
 
                 <a class="navbar-brand mr-auto" href="<?php echo get_home_url(); ?>">
-                    <strong style="background: #fff; padding: 12px; border-radius: 4px; color: #28669F;"><?php echo get_bloginfo( 'name' ); ?></strong>
+                    <strong style="background: #fff; padding: 12px;
+                            border-radius: 4px; color: #28669F;"><?php echo get_bloginfo( 'name' ); ?></strong>
                 </a>
 
                 <div class="hidden-sm-down text-uppercase">
 
-					<?php if ( has_nav_menu( 'primary' ) ) :
+					<?php
+
+					/**
+					 * Mobile Nav Menu
+					 */
+					if ( has_nav_menu( 'primary' ) ) :
 						wp_nav_menu( array(
 							'theme_location' => 'primary',
 							'menu_class'     => 'navbar-nav',
 							'container'      => false
 						) );
-					endif; ?>
+					endif;
+
+					?>
 
                 </div>
 

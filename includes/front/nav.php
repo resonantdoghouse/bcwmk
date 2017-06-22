@@ -45,21 +45,21 @@ function bcwmk_custom_menu_item( $items, $args ) {
 	$footer_links = array();
 
 	// repeater
-	if( have_rows('mobile_nav_footer_links', 'option'  ) ):
-		while ( have_rows('mobile_nav_footer_links', 'option' ) ) : the_row();
+	if ( have_rows( 'mobile_nav_footer_links', 'option' ) ):
+		while ( have_rows( 'mobile_nav_footer_links', 'option' ) ) : the_row();
 
 			$footer_link = '<li class="nav-item"><a class="nav-link" href="#">' .
-			               get_sub_field('nav_footer_link_title', 'option' ) .
-		                   '</a></li>';
+			               get_sub_field( 'nav_footer_link_title', 'option' ) .
+			               '</a></li>';
 
-			array_push($footer_links, $footer_link);
+			array_push( $footer_links, $footer_link );
 
 		endwhile;
 	else :
 		// no rows found
 	endif;
 
-	$footer_links_output = join(' ', $footer_links );
+	$footer_links_output = join( ' ', $footer_links );
 
 	if ( $args->theme_location == 'primary-mobile' ) {
 
@@ -68,8 +68,7 @@ function bcwmk_custom_menu_item( $items, $args ) {
 		         $items .
 		         '<li class="nav-divider"></li>' .
 		         '<li class="nav-header">Nav Footer</li>' .
-		         $footer_links_output .
-		         '<li class="nav-item"><a class="nav-link" href="#">Custom Link</a></li>';
+		         $footer_links_output;
 	}
 
 	return $items;

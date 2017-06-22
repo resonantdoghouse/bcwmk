@@ -1,4 +1,20 @@
-<?php get_header(); ?>
+<?php
+
+get_header();
+
+
+// Background Image Testing ACF
+$image_id    = get_field( "header_background", 'options' );
+$image_size  = 'full';
+$image_array = wp_get_attachment_image_src( $image_id, $image_size );
+$image_url   = $image_array[0];
+
+
+$header_background_overlay = get_field( "header_background_overlay", 'options' );
+
+
+?>
+
 
 <div class="stage-shelf stage-shelf-right hidden" id="sidebar">
 
@@ -13,17 +29,6 @@
 </div>
 
 <div class="stage" id="stage">
-
-    <?php
-
-
-    $image_id = get_field( "header_background", 'options' );
-    $image_size = 'full';
-
-    $image_array = wp_get_attachment_image_src($image_id, $image_size);
-    $image_url = $image_array[0];
-
-    ?>
 
 
     <div class="block block-inverse block-fill-height app-header"
@@ -70,15 +75,16 @@
                 <div class="row">
                     <div class="col-sm-10 col-lg-6">
                         <h1 class="block-titleData frequency">Analytics on demand.</h1>
-                        <p class="lead mb-4 text-muted">Stop installing bloated scripts that all track the exact same
+                        <p class="lead mb-4 text-muted">Stop installing bloated scripts that all track the exact
+                            same
                             things. Install one that does everything.</p>
                         <button class="btn btn-primary btn-lg">Try it now</button>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
+
 
     <div class="block block-secondary app-iphone-block">
         <div class="container">
@@ -288,49 +294,6 @@
         </div>
     </div>
 
-    <div class="block block-inverse app-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-5 mb-5">
-                    <ul class="list-unstyled list-spaced">
-                        <li class="mb-2"><h6 class="text-uppercase">About</h6></li>
-                        <li class="text-muted">
-                            We’ve been working on Go Analytics for the better part of a decade and are super proud of
-                            what we’ve created. If you’d like to learn more, or are interested in a job, contact us
-                            anytime at <a href="mailto: themes@getbootstrap.com">themes@getbootstrap.com</a>.
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-2 offset-md-1 mb-5">
-                    <ul class="list-unstyled list-spaced">
-                        <li class="mb-2"><h6 class="text-uppercase">Product</h6></li>
-                        <li class="text-muted">Features</li>
-                        <li class="text-muted">Examples</li>
-                        <li class="text-muted">Tour</li>
-                        <li class="text-muted">Gallery</li>
-                    </ul>
-                </div>
-                <div class="col-md-2 mb-5">
-                    <ul class="list-unstyled list-spaced">
-                        <li class="mb-2"><h6 class="text-uppercase">Apis</h6></li>
-                        <li class="text-muted">Rich data</li>
-                        <li class="text-muted">Simple data</li>
-                        <li class="text-muted">Real time</li>
-                        <li class="text-muted">Social</li>
-                    </ul>
-                </div>
-                <div class="col-md-2 mb-5">
-                    <ul class="list-unstyled list-spaced">
-                        <li class="mb-2"><h6 class="text-uppercase">Legal</h6></li>
-                        <li class="text-muted">Terms</li>
-                        <li class="text-muted">Legal</li>
-                        <li class="text-muted">Privacy</li>
-                        <li class="text-muted">License</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
 
 </div>
 

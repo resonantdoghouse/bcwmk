@@ -45,6 +45,7 @@ $header_background_overlay = get_field( "header_background_overlay", 'options' )
              echo get_template_directory_uri() . '/assets/img/startup-1.jpg';
          }
 	     ?> )">
+        
 
         <div class="container py-4 fixed-top app-navbar">
 

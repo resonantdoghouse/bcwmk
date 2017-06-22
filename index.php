@@ -45,7 +45,7 @@ $header_background_overlay = get_field( "header_background_overlay", 'options' )
              echo get_template_directory_uri() . '/assets/img/startup-1.jpg';
          }
 	     ?> )">
-        
+
 
         <div class="container py-4 fixed-top app-navbar">
 
@@ -107,7 +107,7 @@ $header_background_overlay = get_field( "header_background_overlay", 'options' )
     </div>
 
 
-    <div class="block block-secondary app-iphone-block">
+    <div id="section_1" class="block block-secondary app-iphone-block">
         <div class="container">
             <div class="row app-align-center">
 
@@ -140,7 +140,7 @@ $header_background_overlay = get_field( "header_background_overlay", 'options' )
         </div>
     </div>
 
-    <div class="block block-inverse block-secondary app-code-block">
+    <div id="section_2" class="block block-inverse block-secondary app-code-block">
         <div class="container">
             <div class="row app-align-center">
                 <div class="col-md-5 push-md-7">
@@ -177,7 +177,7 @@ $header_background_overlay = get_field( "header_background_overlay", 'options' )
         </div>
     </div>
 
-    <div class="block block-inverse app-high-praise"
+    <div id="section_3" class="block block-inverse app-high-praise"
          style="background-image: url(<?php echo get_template_directory_uri() . '/assets/img/startup-3.jpg' ?>);">
         <div class="container">
             <div class="row app-align-center py-3">

@@ -28,9 +28,14 @@ function bcwmk_enqueue() {
 		get_template_directory_uri() . '/assets/js/application.js',
 		array( 'jquery', 'bcwmk_tool', 'bcwmk_tether' ), BCWMK_VERSION, true );
 
+	wp_register_script( 'bcwmk',
+		get_template_directory_uri() . '/assets/js/bcwmk.js',
+		array( 'jquery', 'bcwmk_tool', 'bcwmk_tether', 'bcwmk_app' ), BCWMK_VERSION, true );
+
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'bcwmk_tether' );
 	wp_enqueue_script( 'bcwmk_tool' );
 	wp_enqueue_script( 'bcwmk_app' );
+	wp_enqueue_script( 'bcwmk' );
 
 }

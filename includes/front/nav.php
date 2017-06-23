@@ -31,7 +31,7 @@ function bcwmk_menuitem_classes( $classes, $item, $args, $depth ) {
  */
 function bcwmk_add_class_link_menu_items( $atts, $item, $args ) {
 	// add the desired attributes:
-	$atts['class'] = $args->menu_id . 'nav-link';
+	$atts['class'] = $args->menu_id . 'nav-link page-scroll';
 
 	return $atts;
 }

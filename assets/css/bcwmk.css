@@ -1,62 +1,72 @@
-.stage-shelf {
-    position: fixed;
-}
+/*.stage-shelf {*/
+    /*position: fixed;*/
+/*}*/
 
-.logged-in .app-navbar,
-.logged-in .stage-shelf {
-    top: 32px;
-}
+/*.logged-in .app-navbar,*/
+/*.logged-in .stage-shelf {*/
+    /*top: 32px;*/
+/*}*/
 
-.customize-partial-edit-shortcuts-shown .app-navbar,
-.customize-partial-edit-shortcuts-shown .stage-shelf {
-    top: 0;
-}
+/*.customize-partial-edit-shortcuts-shown .app-navbar,*/
+/*.customize-partial-edit-shortcuts-shown .stage-shelf {*/
+    /*top: 0;*/
+/*}*/
 
 
-.app-navbar {
-    position: fixed;
-    transition: .5s;
-    width: 100%;
-    max-width: 100%;
-}
+/*.app-navbar {*/
+    /*position: fixed;*/
+    /*transition: .5s;*/
+    /*width: 100%;*/
+    /*max-width: 100%;*/
+/*}*/
 
-.app-navbar > nav {
-    max-width: 1130px;
-    margin: auto;
-}
+/*.app-navbar > nav {*/
+    /*max-width: 1130px;*/
+    /*margin: auto;*/
+/*}*/
 
-.app-navbar.active {
-    background-color: #fff;
-    width: 100%;
+/*.app-navbar.active {*/
+    /*background-color: #fff;*/
+    /*width: 100%;*/
 
-    padding-top: .25em !important; /* BootStrap set this to !important , had to override */
-    padding-bottom: .25em !important; /* BootStrap set this to !important , had to override */
-}
+    /*padding-top: .25em !important; !* BootStrap set this to !important , had to override *!*/
+    /*padding-bottom: .25em !important; !* BootStrap set this to !important , had to override *!*/
 
-.navbar-toggler {
+    /*z-index: 9001;*/
+/*}*/
 
-}
-.navbar-toggler.active,
-.navbar-toggler.active:hover {
-    background-color: #28669F;
-}
+/*.sidebarOpen {*/
+    /*!*display: block !important;*!*/
+/*}*/
 
-.logged-in .app-navbar.active ,
-.logged-in .stage-shelf {
-    top: 0;
-}
+/*.stage-open .app-navbar.active {*/
+    /*transform: translate(0px,0px);*/
+/*}*/
 
-.app-navbar.active nav a
-{
-    color: #28669F;
-}
-.app-navbar .navbar-brand strong {
-    transition: .5s;
-}
-.app-navbar.active .navbar-brand strong {
-    color: #fff !important;
-    background: #28669F !important;
-}
+/*.navbar-toggler {*/
+
+/*}*/
+/*.navbar-toggler.active,*/
+/*.navbar-toggler.active:hover {*/
+    /*background-color: #28669F;*/
+/*}*/
+
+/*.logged-in .app-navbar.active ,*/
+/*.logged-in .stage-shelf {*/
+    /*top: 0;*/
+/*}*/
+
+/*.app-navbar.active nav a*/
+/*{*/
+    /*color: #28669F;*/
+/*}*/
+/*.app-navbar .navbar-brand strong {*/
+    /*transition: .5s;*/
+/*}*/
+/*.app-navbar.active .navbar-brand strong {*/
+    /*color: #fff !important;*/
+    /*background: #28669F !important;*/
+/*}*/
 
 
 

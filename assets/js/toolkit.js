@@ -4524,7 +4524,7 @@ var Stage = function ($) {
       this._element.offsetWidth; // force reflow
 
       $(this._element).css({
-        '-webkit-transform': 'translateX(' + this._config.distance + 'px)',
+        'left':  + this._config.distance + 'px)',
         '-ms-transform': 'translateX(' + this._config.distance + 'px)',
         'transform': 'translateX(' + this._config.distance + 'px)'
       }).one(Util.TRANSITION_END, function () {

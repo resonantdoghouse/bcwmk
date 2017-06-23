@@ -1,16 +1,19 @@
 <div class="block block-inverse app-footer">
     <div class="container">
+
         <div class="row">
+
             <div class="col-md-5 mb-5">
                 <ul class="list-unstyled list-spaced">
                     <li class="mb-2"><h6 class="text-uppercase">About</h6></li>
                     <li class="text-muted">
-                        We’ve been working on Go Analytics for the better part of a decade and are super proud of
-                        what we’ve created. If you’d like to learn more, or are interested in a job, contact us
-                        anytime at <a href="mailto: themes@getbootstrap.com">themes@getbootstrap.com</a>.
+                        <p>Science cuts two ways, of course; its products can be used for both good and evil. But
+                            there's no turning back from science. </p>
+                        <p><a href="https://buildcreativewebsites.com">Build Creative Websites</a></p>
                     </li>
                 </ul>
             </div>
+
             <div class="col-md-2 offset-md-1 mb-5">
                 <ul class="list-unstyled list-spaced">
                     <li class="mb-2"><h6 class="text-uppercase">Product</h6></li>
@@ -20,6 +23,7 @@
                     <li class="text-muted">Gallery</li>
                 </ul>
             </div>
+
             <div class="col-md-2 mb-5">
                 <ul class="list-unstyled list-spaced">
                     <li class="mb-2"><h6 class="text-uppercase">Apis</h6></li>
@@ -29,6 +33,7 @@
                     <li class="text-muted">Social</li>
                 </ul>
             </div>
+
             <div class="col-md-2 mb-5">
                 <ul class="list-unstyled list-spaced">
                     <li class="mb-2"><h6 class="text-uppercase">Legal</h6></li>
@@ -38,7 +43,23 @@
                     <li class="text-muted">License</li>
                 </ul>
             </div>
+
         </div>
+
+        <div class="row">
+            <div class="col-md-12 mb-12">
+
+                <?php
+
+                if ( get_theme_mod( 'bcwmk_facebook_handle' ) ){
+                    echo get_theme_mod('bcwmk_facebook_handle' );
+                }
+
+                ?>
+
+            </div>
+        </div>
+
     </div>
 </div>
 

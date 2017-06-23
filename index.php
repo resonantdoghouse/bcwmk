@@ -39,9 +39,14 @@ $header_background_overlay = get_field( "header_background_overlay", 'options' )
 
     <div class="block block-inverse block-fill-height app-header"
          style="background-image: url(<?php
-         if ($image_url){
-	        echo $image_url;
-         } else {
+
+         if ( get_theme_mod( 'bcwmk_background_image_handle' ) ) {
+	         echo get_theme_mod( 'bcwmk_background_image_handle' );
+         }
+//         if ($image_url){
+//	        echo $image_url;
+//         }
+         else {
              echo get_template_directory_uri() . '/assets/img/startup-1.jpg';
          }
 	     ?> )">

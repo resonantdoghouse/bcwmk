@@ -9,13 +9,16 @@ function bcwmk_enqueue() {
 		get_stylesheet_directory_uri() . '/assets/css/application-startup.css'
 	);
 	wp_register_style( 'bcwmk_gfont',
-		'https://fonts.googleapis.com/css?family=Lora:400,400italic|Work+Sans:300,400,500,600\' rel=\'stylesheet\'
-'
+		'https://fonts.googleapis.com/css?family=Lora:400,400italic|Work+Sans:300,400,500,600'
+	);
+	wp_register_style( 'bcwmk',
+		get_stylesheet_directory_uri() . '/assets/css/bcwmk.css', 'bcwmk_app_startup',BCWMK_VERSION
 	);
 
 	wp_enqueue_style( 'bcwmk_tool_startup' );
 	wp_enqueue_style( 'bcwmk_app_startup' );
 	wp_enqueue_style( 'bcwmk_gfont' );
+	wp_enqueue_style( 'bcwmk' );
 
 
 	wp_register_script( 'bcwmk_tether',

@@ -1,7 +1,7 @@
 <?php
 
 // Constant for version number
-define( 'BCWMK_VERSION', 1.1 );
+define( 'BCWMK_VERSION', 1.2 );
 
 
 // setup

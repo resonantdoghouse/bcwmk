@@ -2,7 +2,7 @@
 
     /**
      * Smooth Scroll
-      */
+     */
     // Select all links with hashes
     $('a[href*="#"]')
     // Remove links that don't actually link to anything
@@ -29,7 +29,7 @@
                         // Must change focus!
                         var $target = $(target);
                         $target.focus();
-                        if ($target.is(":focus")) { // Checking if the target was focused
+                        if ($target.is(':focus')) { // Checking if the target was focused
                             return false;
                         } else {
                             $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
@@ -40,5 +40,21 @@
                 }
             }
         });
+
+
+    /**
+     * Header on Scroll, change style
+     */
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 10) {
+            $('.app-navbar, .stage-shelf, .navbar-toggler').addClass('active');
+            $('#wpadminbar').css({'position': 'static'});
+
+        } else {
+            $(".app-navbar, .stage-shelf, .navbar-toggler").removeClass('active');
+            $('#wpadminbar').css({'position': 'fixed'});
+        }
+    });
+
 
 })(jQuery);

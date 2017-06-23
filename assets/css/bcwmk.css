@@ -1,7 +1,3 @@
-.app-navbar {
-    position: fixed;
-}
-
 .stage-shelf {
     position: fixed;
 }
@@ -15,6 +11,56 @@
 .customize-partial-edit-shortcuts-shown .stage-shelf {
     top: 0;
 }
+
+
+.app-navbar {
+    position: fixed;
+    transition: .5s;
+    width: 100%;
+    max-width: 100%;
+}
+
+.app-navbar > nav {
+    max-width: 1130px;
+    margin: auto;
+}
+
+.app-navbar.active {
+    background-color: #fff;
+    width: 100%;
+
+    padding-top: .25em !important; /* BootStrap set this to !important , had to override */
+    padding-bottom: .25em !important; /* BootStrap set this to !important , had to override */
+}
+
+.navbar-toggler {
+
+}
+.navbar-toggler.active,
+.navbar-toggler.active:hover {
+    background-color: #28669F;
+}
+
+.logged-in .app-navbar.active ,
+.logged-in .stage-shelf {
+    top: 0;
+}
+
+.app-navbar.active nav a
+{
+    color: #28669F;
+}
+.app-navbar .navbar-brand strong {
+    transition: .5s;
+}
+.app-navbar.active .navbar-brand strong {
+    color: #fff !important;
+    background: #28669F !important;
+}
+
+
+
+
 
 /* note: this is a hack for ios iframe for bootstrap themes shopify page */
 /* this chunk of css is not part of the toolkit :) */

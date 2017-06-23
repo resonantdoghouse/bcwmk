@@ -1,7 +1,7 @@
 <?php
 
 // Constant for version number
-define( 'BCWMK_VERSION', 1.2 );
+define( 'BCWMK_VERSION', 1.3 );
 
 
 // setup
@@ -19,6 +19,8 @@ include( get_template_directory() . '/includes/admin/acf-opts.php' );
 include( get_template_directory() . '/includes/theme-customizer.php' );
 include( get_template_directory() . '/includes/customizer/bg-image.php' );
 include( get_template_directory() . '/includes/customizer/social.php' );
+
+include( get_template_directory() . '/templates/bg-image.php' );
 
 
 // Action & Filter Hooks
